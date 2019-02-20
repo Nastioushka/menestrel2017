@@ -1,0 +1,16 @@
+<main>
+	<section class="page" id="<?=$_GET['page']; ?>">
+		<h1><?=$titrePage['contenu_chapitre']; ?></h1>
+			<?php foreach ($articles as $article => $partie): ?>
+				<article>
+					<h2><?=$partie['titreArticle']; ?></h2>
+
+					<?php if($partie['imageArticle']!=''): ?>
+						<img src="img/photoArt/<?=$partie['imageArticle']; ?>" alt="<?=$partie['alt']; ?>" />
+					<?php endif; ?>
+
+					<p><?=$partie['textArticle']; ?></p>
+				</article>
+			<?php endforeach; ?>
+	</section>
+</main>
